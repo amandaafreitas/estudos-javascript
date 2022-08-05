@@ -1,26 +1,6 @@
-class Cliente {
-  nome; //atributos
-  cpf;
-}
+import { Cliente } from "./Cliente.js";
+import { ContaCorrente } from "./ContaCorrente.js";
 
-class ContaCorrente {
-  agencia;
-  _saldo = 0;
-  //metodo sacar
-  sacar(valor) {
-    if (this._saldo >= valor) {
-      this._saldo -= valor;
-      return valor;
-    }
-  }
-
-  depositar(valor) {
-    if (valor <= 0) return;
-    this._saldo += valor;
-  }
-}
-
-// cria um objeto a partir do molde, a classe(cria uma instancia da classe)
 const cliente1 = new Cliente();
 cliente1.nome = "Ricardo";
 cliente1.cpf = "11122233309";
