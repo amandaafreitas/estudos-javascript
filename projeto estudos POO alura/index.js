@@ -11,13 +11,15 @@ cliente2.cpf = "88822233309";
 
 const contaCorrenteRicardo = new ContaCorrente();
 contaCorrenteRicardo.agencia = 1001;
+contaCorrenteRicardo.cliente = cliente1;
+contaCorrenteRicardo.depositar(500);
 
-contaCorrenteRicardo.depositar(-100);
-contaCorrenteRicardo.depositar(100);
-contaCorrenteRicardo.depositar(100);
+const contaCorrenteAlice = new ContaCorrente();
+contaCorrenteAlice.agencia = 102;
+contaCorrenteAlice.cliente = cliente2;
 
-const valorSacado = contaCorrenteRicardo.sacar(50);
+let valor = 200;
+contaCorrenteRicardo.transferir(valor, contaCorrenteAlice);
 
-console.log(valorSacado);
-
-console.log(contaCorrenteRicardo);
+console.log("valor: ", valor);
+console.log(contaCorrenteAlice.cliente);
